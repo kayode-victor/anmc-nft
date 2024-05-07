@@ -55,16 +55,16 @@ const Footer = () => {
                 Join The Movement
               </h1>
               <div className="flex flex-col lg:gap-4 ">
-                <Link href="/partner">
+                <Link href="/speakers">
                   <p className="text-white text-xl">Become a speaker</p>
                 </Link>
                 <Link href="/partner">
                   <p className="text-white text-xl">Join us as a partner</p>
                 </Link>
-                <Link href="/partner">
+                <Link href="/">
                   <p className="text-white text-xl">Sponsors tickets</p>
                 </Link>
-                <Link href="/partner">
+                <Link href="/">
                   <p className="text-white text-xl">Submit your work</p>
                 </Link>
               </div>
