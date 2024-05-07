@@ -103,7 +103,7 @@ const Mint = () => {
         <div className="w-full md:w-1/2">
           <Link
             href="/"
-            className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center border border-2 border-[#5E54EF] rounded-xl justify-center"
+            className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center  border-2 border-[#5E54EF] rounded-xl justify-center"
           >
             STUDENT TICKET
           </Link>
@@ -111,7 +111,7 @@ const Mint = () => {
         <div className="w-full md:w-1/2">
           <Link
             href="/"
-            className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center border border-2 border-[#5E54EF] rounded-xl justify-center"
+            className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center  border-2 border-[#5E54EF] rounded-xl justify-center"
           >
             BECOME A VOLUNTEER
           </Link>

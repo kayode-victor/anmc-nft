@@ -29,10 +29,10 @@ const Day2 = () => {
               [ DAY TWO ]
             </div>
 
-            <p className="font-bold text-[26px] md:text-[36px] text-center md:text-left mb-5 md:mb-10 leading-[20px] text-black">
+            <p className="font-bold text-[26px] md:text-[36px] text-center md:text-right mb-5 md:mb-10 leading-[32px] text-black">
               Convergence Gala - Shaping the Digital{" "}
               <br className="hidden lg:block" />
-              Landscape
+              <span> Landscape</span>
             </p>
             <div className="">
               <p className=" font-normal text-[22px] md:text-[20px] lg:w-[520px] lg:text-right leading-[20px] text-black">
