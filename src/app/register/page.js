@@ -1,13 +1,18 @@
 "use client";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import Regform from "@/components/Regform";
 import React from "react";
 
 const page = () => {
   return (
-    <div>
-      <div>
-        <p>registration page</p>
+    <main className="w-full flex flex-col gap-0 overflow-hidden font-firaSansCondensed">
+      <Header />
+      <div className="pt-20">
+        <Regform />
       </div>
-    </div>
+      <Footer />
+    </main>
   );
 };
 
