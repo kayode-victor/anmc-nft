@@ -185,7 +185,7 @@ const Regform = () => {
                   />
                 </div>
               </div>
-              <div className="flex flex-col lg:flex-row lg:mx-32 mx-8 lg:gap-24">
+              <div className="flex flex-col lg:flex-row lg:mx-32 my-5 mx-8 lg:gap-24">
                 <select
                   id="role"
                   value={role}
