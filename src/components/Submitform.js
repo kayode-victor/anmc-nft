@@ -184,7 +184,7 @@ const SubmitWorkForm = () => {
               >
                 {({ open }) => (
                   <motion.button
-                    // ... your existing button styles
+                    className="flex items-center justify-center bg-red-500 text-white gap-2 py-3 rounded-lg w-[160px] hover:animate-pulse hover:text-red-500 border-4 border-red-500 hover:bg-white "
                     onClick={open}
                   >
                     Upload Images
