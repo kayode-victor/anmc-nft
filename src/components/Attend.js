@@ -70,11 +70,11 @@ const Attend = () => {
   return (
     <div className="mb-10 md:mb-16">
       <div className="mb-10">
-        <p className="text-[24px] md:text-[32px] lg:text-[44px] font-semibold text-center">
+        <p className="text-[28px] md:text-[32px] lg:text-[44px] font-semibold text-center">
           WHERE INNOVATION MEET CREATIVITY...
         </p>
       </div>
-      <div className="grid grid-cols-3 md:grid-cols-4 lg:mx-32 mx-3 gap-x-5 gap-y-5 lg:gap-x-20 lg:gap-y-10">
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:mx-32 mx-3 gap-x-5 gap-y-5 lg:gap-x-20 lg:gap-y-10">
         {attendbox.map((item, index) => (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -95,7 +95,7 @@ const Attend = () => {
               className="object-cover w-full h-full"
             />
             <div className="absolute inset-0 bg-black opacity-30 transition-opacity duration-300 ease-in-out group-hover:opacity-100"></div>
-            <p className="absolute inset-0 flex items-center justify-center text-center text-white font-light text-[12px]  md:text-[16px] lg:text-[26px] pointer-events-none">
+            <p className="absolute inset-0 flex items-center justify-center text-center text-white font-light text-[20px] md:text-[24px] lg:text-[26px] pointer-events-none">
               {item.title}
             </p>
           </motion.div>

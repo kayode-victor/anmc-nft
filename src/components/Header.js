@@ -21,7 +21,7 @@ function Header() {
   };
 
   return (
-    <header className="sticky-header flex bg-white py-2  px-8 lg:px-24 items-center justify-between ">
+    <header className="sticky-header flex bg-white py-2  px-8 lg:px-24 items-center justify-between">
       <div className="container mx-auto flex items-center justify-between">
         {/* Logo */}
         <div className="flex">
@@ -43,7 +43,7 @@ function Header() {
         </nav>
         {/* register button (Hidden on Mobile) */}
         <div className="hidden md:flex uppercase text-white bg-black text-sm font-light py-2 px-4 rounded-lg hover:bg-blue-600">
-          <Link href="/">register</Link>
+          <Link href="/register">register</Link>
         </div>
         {/* Mobile section*/}
         {/* Mobile menu toggle */}
@@ -76,7 +76,7 @@ function Header() {
               </Link>
             ))}
             <div className="flex justify-center uppercase text-white bg-black text-lg font-light mt-8 py-2 px-2 rounded-lg hover:bg-blue-600">
-              <Link href="/">register</Link>
+              <Link href="/register">register</Link>
             </div>
           </div>
         </div>

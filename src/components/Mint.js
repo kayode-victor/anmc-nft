@@ -41,7 +41,7 @@ ACCESS TO ANMC KENYA`,
 const Mint = () => {
   return (
     <div className="flex flex-col py-10 md:py-16 overflow-hidden">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-2 md:mx-8 lg:mx-20 mb-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4 lg:gap-6 mx-4 md:mx-8 lg:mx-20 mb-10">
         {contents.map((content, index) => (
           <motion.div
             key={index}
@@ -51,7 +51,7 @@ const Mint = () => {
             transition={{ delay: index * 0.1, duration: 0.5 }} // Stagger
             className="w-full overflow-hidden relative"
           >
-            <div className="w-full h-[620px]">
+            <div className="w-full h-[600px]">
               <div className="w-full h-full ">
                 <Image
                   src={content.img}
@@ -88,7 +88,7 @@ const Mint = () => {
                 </div>
                 <div className="absolute bottom-0 w-full z-20">
                   <Link
-                    href="/"
+                    href="/register"
                     className="flex bg-[#564CD9] text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-5 md:py-8 text-xl items-center rounded-b-2xl justify-center"
                   >
                     <p>MINT PASS</p>
@@ -102,7 +102,7 @@ const Mint = () => {
       <div className="flex flex-col md:flex-row w-full justify-between py-10 md:py-20 px-2 md:px-10 lg:px-32 gap-2 md:gap-10">
         <div className="w-full md:w-1/2">
           <Link
-            href="/"
+            href="https://forms.gle/MF6RMMjxmJgNkHio8"
             className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center  border-2 border-[#5E54EF] rounded-xl justify-center"
           >
             STUDENT TICKET
@@ -110,7 +110,7 @@ const Mint = () => {
         </div>
         <div className="w-full md:w-1/2">
           <Link
-            href="/"
+            href="https://forms.gle/MF6RMMjxmJgNkHio8"
             className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center  border-2 border-[#5E54EF] rounded-xl justify-center"
           >
             BECOME A VOLUNTEER

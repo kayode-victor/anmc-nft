@@ -4,40 +4,34 @@ import sponsor2 from "../public/sponsor2.png";
 import sponsor3 from "../public/sponsor3.png";
 import Image from "next/image";
 
+const sponsors = [
+  {
+    title: "Sponsor 1",
+    img: sponsor1,
+  },
+  {
+    title: "Sponsor 2",
+    img: sponsor2,
+  },
+  {
+    title: "Sponsor 3",
+    img: sponsor3,
+  },
+];
+
 const Batches = () => {
   return (
-    <div className="w-full bg-[#232323]">
-      <div className="flex flex-col md:flex-row justify-between items-center gap-5 mx-5 lg:mx-24 py-4 md:py-0">
-        <div className="w-full md:w-1/3">
-          <Image
-            className="object-cover"
-            alt="sponsor png"
-            src={sponsor1}
-            layout="responsive"
-            width={276} // Specify original width
-            height={276} // Specify original height
-          />
-        </div>
-        <div className="w-full md:w-1/3 ">
-          <Image
-            className="object-cover"
-            alt="Zerctech consult"
-            src={sponsor2}
-            layout="responsive"
-            width={662}
-            height={116}
-          />
-        </div>
-        <div className="w-full md:w-1/3">
-          <Image
-            className="object-cover"
-            alt="Chambers"
-            src={sponsor3}
-            layout="responsive"
-            width={276}
-            height={276}
-          />
-        </div>
+    <div className="flex bg-[#232323] justify-center items-center w-full">
+      <div className="flex items-center justify-center pt-5 md:pt-10 gap-5 md:gap-16 w-full">
+        {sponsors.map((item, index) => (
+          <div key={index} className="">
+            <Image
+              src={item.img}
+              alt={item.title}
+              className="object-contain w-[200px] md:w-[360px]"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

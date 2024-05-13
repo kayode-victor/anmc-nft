@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const Day1 = () => {
   return (
-    <div className="w-full h-[560px] lg:h-[700px]">
+    <div className="w-full h-[560px]">
       <div className="w-full h-full">
         <div className="relative">
           <Image

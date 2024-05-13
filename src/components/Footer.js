@@ -61,10 +61,10 @@ const Footer = () => {
                 <Link href="/partner">
                   <p className="text-white text-xl">Join us as a partner</p>
                 </Link>
-                <Link href="/">
-                  <p className="text-white text-xl">Sponsors tickets</p>
+                <Link href="https://forms.gle/MF6RMMjxmJgNkHio8">
+                  <p className="text-white text-xl">Become a volunteer</p>
                 </Link>
-                <Link href="/">
+                <Link href="/submit-work">
                   <p className="text-white text-xl">Submit your work</p>
                 </Link>
               </div>
@@ -81,7 +81,7 @@ const Footer = () => {
                 <Link href="/about">
                   <p className="text-white text-xl">Contact Us</p>
                 </Link>
-                <Link href="/about">
+                <Link href="/terms-and-conditions">
                   <p className="text-white text-xl">Terms of Use</p>
                 </Link>
               </div>

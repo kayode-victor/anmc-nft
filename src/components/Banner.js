@@ -37,13 +37,13 @@ const Banner = () => {
           </div>
 
           <Link
-            href="/"
+            href="/https://app.moongate.id/e/africa-nft-metaverse-investors"
             className="flex items-center justify-center bg-[#5E54EF] text-white mt-4 gap-2 py-3 rounded-lg w-[120px] hover:animate-pulse hover:text-[#5E54EF] hover:bg-white text-[14px] text-semibold"
           >
             Early Bird
             <FaArrowRight />
           </Link>
-          <p className="text-[12px] md:text-[18px] font-light gap-0 mt-4">
+          <p className="text-[14px] md:text-[18px] font-light gap-0 mt-4">
             Ticket prices increase by 60 days before event for VIP. Mint !
           </p>
         </motion.div>

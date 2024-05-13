@@ -39,7 +39,7 @@ const Speakerhero = () => {
             Become a speaker in the prominent Africa NFT Metaverse Conference
           </p>
           <Link
-            href="/"
+            href="https://forms.gle/1qkmHY8RwpqQB5zv8"
             className="flex items-center justify-center bg-[#5E54EF] text-white mt-4 md:mt-10 gap-2 py-3 rounded-lg w-[120px] hover:animate-pulse hover:text-[#5E54EF] hover:bg-white text-[14px] text-semibold"
           >
             Register Now
