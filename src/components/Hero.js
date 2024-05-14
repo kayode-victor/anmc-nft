@@ -68,7 +68,7 @@ const Hero = () => {
           <div className="flex flex-col">
             <p className="text-[72px] md:text-[100px] font-bold mb-2">Africa</p>
             <p className="relative text-[32px] md:text-[40px] font-bold bottom-10">
-              NFT & Metaverse Conference
+              NFT Metaverse Conference
             </p>
           </div>
           <p className="flex relative bottom-6 flex-col text-[20px] gap-0 mb-4">

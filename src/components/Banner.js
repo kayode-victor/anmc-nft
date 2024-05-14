@@ -32,7 +32,7 @@ const Banner = () => {
           <div className="flex flex-col">
             <p className="text-[72px] md:text-[150px] font-bold">TICKETS</p>
             <p className="relative text-[20px] md:text-[32px] font-bold">
-              NFT & Metaverse Conference
+              NFT Metaverse Conference
             </p>
           </div>
 

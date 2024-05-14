@@ -10,7 +10,7 @@ const firaSansCondensed = Fira_Sans_Condensed({
 });
 
 export const metadata = {
-  title: "ANMC | Africa NFT  & Metaverse Conference",
+  title: "ANMC | Africa NFT Metaverse Conference",
   description:
     "Unlocking Africa's Digital Future : showcasing Creativity. Made by Africa. For Africa",
   keywords: [

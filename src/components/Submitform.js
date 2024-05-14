@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaFileImage } from "react-icons/fa";
 
 async function addDataToFireStore(name, email, company, imageLink) {
   try {
@@ -183,17 +184,22 @@ const SubmitWorkForm = () => {
                   />
                 </div>
               </div>
-              {/* Display uploaded images */}
-              <div className="mt-4 border-2 rounded-xl h-[520px] w-full md:w-1/2">
-                {imageLink && (
-                  <div className="h-full w-full  p-4 overflow-hidden">
+              {/* Improved Image Viewer */}
+              <div className="mt-4 border-2 rounded-xl md:h-[520px] w-full md:w-1/2 flex items-center justify-center">
+                {imageLink ? (
+                  <div className="h-full w-full p-4 overflow-hidden">
                     <Image
                       src={imageLink}
                       alt="Uploaded Image"
-                      width={520} // Adjust as needed
+                      width={520}
                       height={520}
                       className="object-cover object-center rounded-lg !h-full !w-full"
                     />
+                  </div>
+                ) : (
+                  <div className="flex flex-col items-center justify-center">
+                    <FaFileImage className="text-6xl text-gray-400" />
+                    <p className="text-gray-500">Awaiting Image...</p>
                   </div>
                 )}
               </div>
