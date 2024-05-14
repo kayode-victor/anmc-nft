@@ -5,16 +5,15 @@ import { collection, addDoc } from "firebase/firestore";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { motion } from "framer-motion";
-import { CldUploadWidget } from "next-cloudinary";
 import Image from "next/image";
 
-async function addDataToFireStore(name, email, company, mediaLinks) {
+async function addDataToFireStore(name, email, company, imageLink) {
   try {
     const docRef = await addDoc(collection(db, "WorkSubmissions"), {
-      name: name,
-      email: email,
-      company: company,
-      mediaLinks: mediaLinks,
+      name,
+      email,
+      company,
+      imageLink, // Store the image link directly
     });
     return true;
   } catch (error) {
@@ -25,16 +24,9 @@ const SubmitWorkForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
-  const [mediaAssets, setMediaAssets] = useState([]);
+  const [imageLink, setImageLink] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
 
-  const handleUpload = (result) => {
-    if (result.event === "success" && result.info.resource_type === "image") {
-      setMediaAssets((prevAssets) => [...prevAssets, result.info]);
-    } else {
-      toast.error("Please upload only image files."); // Show error for non-image uploads
-    }
-  };
   const validateEmail = (email) => {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   };
@@ -60,15 +52,14 @@ const SubmitWorkForm = () => {
       return;
     }
 
-    const mediaLinks = mediaAssets.map((asset) => asset.secure_url);
-    const added = await addDataToFireStore(name, email, company, mediaLinks);
+    const added = await addDataToFireStore(name, email, company, imageLink);
 
     if (added) {
       // Clear the form fields
       setEmail("");
       setName("");
       setCompany("");
-      setMediaAssets([]);
+      setImageLink("");
 
       // Show success toast
       toast.success("Work submitted successfully!", {
@@ -103,10 +94,10 @@ const SubmitWorkForm = () => {
         >
           Submit Your Work
         </motion.h1>
-        <div className="w-full my-4">
+        <div className="flex w-full my-4">
           <form onSubmit={handleSubmit} className="w-full">
-            <div className="">
-              <div className="flex flex-col lg:mx-32 mx-8">
+            <div className="flex flex-col md:flex-row gap-5 items-center justify-center lg:gap-10 lg:mx-24 mx-4">
+              <div className="flex flex-col w-full md:w-1/2">
                 <div className="flex flex-col my-5 w-full ">
                   <motion.p
                     initial={{ opacity: 0, y: 30 }}
@@ -170,40 +161,42 @@ const SubmitWorkForm = () => {
                     className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
                   />
                 </div>
-              </div>
-            </div>
-            <div className="flex w-full justify-center items-center">
-              <CldUploadWidget
-                uploadPreset={process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET}
-                onUpload={handleUpload}
-                options={{
-                  // Restrict uploads to images only
-                  sources: ["local"], // Allow only local uploads
-                  allowedFormats: ["jpg", "png", "jpeg"],
-                }}
-              >
-                {({ open }) => (
-                  <motion.button
-                    className="flex items-center justify-center bg-red-500 text-white gap-2 py-3 rounded-lg w-[160px] hover:animate-pulse hover:text-red-500 border-4 border-red-500 hover:bg-white "
-                    onClick={open}
+                <div className="flex flex-col my-5 w-full">
+                  <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { delay: 0.4, duration: 0.5 },
+                    }}
+                    viewport={{ once: true }}
+                    className="text-xl font-semibold mb-4"
                   >
-                    Upload Images
-                  </motion.button>
+                    Image Link (URL)
+                  </motion.p>
+                  <input
+                    type="text"
+                    id="imageLink"
+                    value={imageLink}
+                    onChange={(e) => setImageLink(e.target.value)}
+                    className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
+                  />
+                </div>
+              </div>
+              {/* Display uploaded images */}
+              <div className="mt-4 border-2 rounded-xl h-[520px] w-full md:w-1/2">
+                {imageLink && (
+                  <div className="h-full w-full  p-4 overflow-hidden">
+                    <Image
+                      src={imageLink}
+                      alt="Uploaded Image"
+                      width={520} // Adjust as needed
+                      height={520}
+                      className="object-cover object-center rounded-lg !h-full !w-full"
+                    />
+                  </div>
                 )}
-              </CldUploadWidget>
-            </div>
-            {/* Display uploaded images */}
-            <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
-              {mediaAssets.map((asset) => (
-                <Image
-                  key={asset.public_id}
-                  src={asset.secure_url}
-                  alt="Uploaded Image"
-                  width={200} // Adjust as needed
-                  height={200}
-                  className="rounded-md" // Optional styling
-                />
-              ))}
+              </div>
             </div>
             <div className="flex items-center justify-center mt-5">
               <motion.button
