@@ -60,9 +60,9 @@ const Regform = () => {
 
       // Show success toast
       toast.success(
-        "You have successfully registered for Africa NFT metaverse conference.",
+        "Registration step 1 complete! Please wait while we redirect you to finish the process.",
         {
-          position: "top-right",
+          position: "top-center",
           autoClose: 5000, // Close after 5 seconds
           hideProgressBar: false,
           closeOnClick: true,
