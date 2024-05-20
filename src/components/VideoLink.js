@@ -1,7 +1,6 @@
 import React from "react";
-import { CldVideoPlayer } from "next-cloudinary";
+import { CldVideoPlayer, getCldImageUrl } from "next-cloudinary";
 import "next-cloudinary/dist/cld-video-player.css";
-
 const VideoLink = () => {
   return (
     <div className="w-full flex items-center justify-center lg:mt-32 my-5">
@@ -11,7 +10,15 @@ const VideoLink = () => {
           width="100%" // Make it take full width of its container
           height="100%"
           aspectRatio="16:9" // Maintain the aspect ratio (optional)
+          autoPlay="on-scroll"
           src="https://res.cloudinary.com/dikzx4eyh/video/upload/v1716218938/pepperlyl/anmc-2_enuiqz.mp4"
+          logo={{
+            imageUrl: getCldImageUrl({
+              src: "https://res.cloudinary.com/dikzx4eyh/image/upload/v1716221817/anmc-logo_jv6jga.png",
+            }),
+            // imageUrl: '<Your Image URL',
+            onClickUrl: "www.africaanmc.com",
+          }}
         />
       </div>
     </div>
