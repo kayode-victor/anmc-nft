@@ -79,9 +79,9 @@ const info = [
 
 const Partnerhero = () => {
   return (
-    <div className="relative overflow-hidden">
+    <div className="relative overflow-hidden w-full">
       {/* Hero Slider */}
-      <div className="h-screen md:h-[680px] w-full flex items-center justify-center">
+      <div className="h-screen md:h-[640px] w-full flex items-center justify-center">
         <Image
           src={heroimg}
           alt="hero"
@@ -93,7 +93,7 @@ const Partnerhero = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-l to-[#051A38] from-[#0458D7] opacity-80"></div>
       </div>
       {/* Hero Content */}
-      <div className="flex flex-col absolute top-[40px] md:top-[30px] justify-center items-center md:mx-[30px]">
+      <div className="flex flex-col absolute top-[40px] md:top-[30px] w-full justify-center items-center ">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{
@@ -114,8 +114,8 @@ const Partnerhero = () => {
             <br className="hidden md:block" /> in the web3 ecosystem
           </p>
         </motion.div>
-        <div className="flex w-full">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 w-full bg-white opacity-65 justify-items-center my-2 md:my-8 lg:my-10 p-2 md:p-5 gap-2 md:gap-3 lg:gap-8  mx-4 md:mx-8 lg:mx-20 pb-5  md:pb-8  lg:pb-20 rounded-xl md:rounded-3xl">
+        <div className="flex w-full justify-center">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 w-full bg-white opacity-65 justify-items-center my-2 md:my-8 lg:my-10 p-2 md:p-5 gap-2 md:gap-3 lg:gap-8 mx-4 md:mx-14 lg:mx-40 pb-5 md:pb-8 lg:pb-10 rounded-xl md:rounded-3xl">
             {info.map((item, index) => (
               <motion.div
                 key={index}

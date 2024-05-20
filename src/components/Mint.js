@@ -102,10 +102,10 @@ const Mint = () => {
       <div className="flex flex-col md:flex-row w-full justify-between py-10 md:py-20 px-2 md:px-10 lg:px-32 gap-2 md:gap-10">
         <div className="w-full md:w-1/2">
           <Link
-            href="https://forms.gle/MF6RMMjxmJgNkHio8"
+            href="/partner"
             className="flex w-full bg-[#564CD9]  text-white hover:animate-pulse hover:text-[#5E54EF] hover:bg-white  font-bold py-2 md:py-4 text-xl items-center  border-2 border-[#5E54EF] rounded-xl justify-center"
           >
-            STUDENT TICKET
+            BECOME A PARTNER
           </Link>
         </div>
         <div className="w-full md:w-1/2">

@@ -46,7 +46,7 @@ const socialLink = [
 const Footer = () => {
   return (
     <>
-      <div className="bg-[#34ADE3] lg:pt-20  pt-8 px-10">
+      <div className="bg-[#34ADE3] lg:pt-20  pt-8 md:px-10 px-5">
         <div className="flex flex-col lg:flex-row lg:gap-12 gap-2">
           <div className="flex flex-col md:flex-row justify-between  md:items-start md:px-10">
             {/*Left side section*/}
@@ -109,6 +109,14 @@ const Footer = () => {
                   </Link>
                 ))}
               </div>
+            </div>
+            <div className="py-4">
+              <p className="text-center text-white">
+                <span className="font-bold">Get in touch:</span> Questions?
+                Partnership opportunities? Send us an
+                <br className="hidden md:block" /> email at info@africaanmc.com
+                and partnership@africaanmc.com.
+              </p>
             </div>
           </div>
         </div>

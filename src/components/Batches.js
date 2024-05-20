@@ -2,6 +2,7 @@ import React from "react";
 import sponsor1 from "../public/sponsor1.png";
 import sponsor2 from "../public/sponsor2.png";
 import sponsor3 from "../public/sponsor3.png";
+import sponsor4 from "../public/sponsor4.png";
 import Image from "next/image";
 
 const sponsors = [
@@ -17,18 +18,22 @@ const sponsors = [
     title: "Sponsor 3",
     img: sponsor3,
   },
+  {
+    title: "Sponsor 4",
+    img: sponsor4,
+  },
 ];
 
 const Batches = () => {
   return (
-    <div className="flex bg-[#232323] justify-center items-center w-full">
-      <div className="flex items-center justify-center pt-5 md:pt-10 gap-5 md:gap-16 w-full">
+    <div className="flex bg-[#232323] justify-center items-center w-full px-4 md:px-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 items-center pt-2 lg:pt-10 gap-5 w-full">
         {sponsors.map((item, index) => (
           <div key={index} className="">
             <Image
               src={item.img}
               alt={item.title}
-              className="object-contain w-[200px] md:w-[360px]"
+              className="object-contain w-[200px] md:w-[300px]"
             />
           </div>
         ))}
