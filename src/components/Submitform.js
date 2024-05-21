@@ -12,8 +12,8 @@ async function addDataToFireStore(
   name,
   email,
   company,
-  imageLink,
-  websiteLink
+  websiteLink,
+  imageLink
 ) {
   try {
     const docRef = await addDoc(collection(db, "WorkSubmissions"), {
@@ -32,8 +32,8 @@ const SubmitWorkForm = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
-  const [imageLink, setImageLink] = useState("");
   const [websiteLink, setWebsiteLink] = useState("");
+  const [imageLink, setImageLink] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
 
   const validateEmail = (email) => {
@@ -74,8 +74,8 @@ const SubmitWorkForm = () => {
       setEmail("");
       setName("");
       setCompany("");
-      setImageLink("");
       setWebsiteLink("");
+      setImageLink("");
 
       // Show success toast
       toast.success("Work submitted successfully!", {
@@ -106,7 +106,7 @@ const SubmitWorkForm = () => {
             transition: { delay: 0.2, duration: 0.5 },
           }}
           viewport={{ once: true }}
-          className="text-[24px] md:text-[32px] lg:text-[44px]  font-semibold"
+          className="text-[24px] md:text-[32px] lg:text-[44px] font-semibold"
         >
           Submit Your Work
         </motion.h1>
