@@ -8,12 +8,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FaFileImage } from "react-icons/fa";
 
-async function addDataToFireStore(name, email, company, imageLink) {
+async function addDataToFireStore(
+  name,
+  email,
+  company,
+  imageLink,
+  websiteLink
+) {
   try {
     const docRef = await addDoc(collection(db, "WorkSubmissions"), {
       name,
       email,
       company,
+      websiteLink,
       imageLink, // Store the image link directly
     });
     return true;
@@ -26,6 +33,7 @@ const SubmitWorkForm = () => {
   const [email, setEmail] = useState("");
   const [company, setCompany] = useState("");
   const [imageLink, setImageLink] = useState("");
+  const [websiteLink, setWebsiteLink] = useState("");
   const [validationErrors, setValidationErrors] = useState([]);
 
   const validateEmail = (email) => {
@@ -53,7 +61,13 @@ const SubmitWorkForm = () => {
       return;
     }
 
-    const added = await addDataToFireStore(name, email, company, imageLink);
+    const added = await addDataToFireStore(
+      name,
+      email,
+      company,
+      websiteLink,
+      imageLink
+    );
 
     if (added) {
       // Clear the form fields
@@ -61,6 +75,7 @@ const SubmitWorkForm = () => {
       setName("");
       setCompany("");
       setImageLink("");
+      setWebsiteLink("");
 
       // Show success toast
       toast.success("Work submitted successfully!", {
@@ -159,6 +174,27 @@ const SubmitWorkForm = () => {
                     id="company"
                     value={company}
                     onChange={(e) => setCompany(e.target.value)}
+                    className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
+                  />
+                </div>
+                <div className="flex flex-col my-5 w-full">
+                  <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{
+                      opacity: 1,
+                      y: 0,
+                      transition: { delay: 0.4, duration: 0.5 },
+                    }}
+                    viewport={{ once: true }}
+                    className="text-xl font-semibold mb-4"
+                  >
+                    Website Link (URL)
+                  </motion.p>
+                  <input
+                    type="text"
+                    id="websiteLink"
+                    value={websiteLink}
+                    onChange={(e) => setWebsiteLink(e.target.value)}
                     className="text-black text-lg font-medium bg-transparent border-2  rounded-xl  focus:outline-none w-full py-4 pl-5"
                   />
                 </div>
