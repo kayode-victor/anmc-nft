@@ -235,7 +235,7 @@ const SubmitWorkForm = () => {
                 ) : (
                   <div className="flex flex-col items-center justify-center">
                     <FaFileImage className="text-6xl text-gray-400" />
-                    <p className="text-gray-500">Awaiting Image...</p>
+                    <p className="text-gray-500">Awaiting Image.....</p>
                   </div>
                 )}
               </div>
