@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.13.0",
+    "@cloudinary/url-gen": "^1.19.0",
     "firebase": "^10.11.1",
     "framer-motion": "^11.1.7",
     "next": "14.2.3",

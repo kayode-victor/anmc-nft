@@ -51,7 +51,7 @@ Extra: Exhibition, Workshop, Startup Pitches, Grant, Presentation`,
   ];
 
   return (
-    <div className="w-full overflow-hidden">
+    <div className="w-full relative py-2 overflow-hidden">
       <div className="my-5 md:mb-10 text-center">
         <motion.p
           initial={{ opacity: 0, y: 20 }}

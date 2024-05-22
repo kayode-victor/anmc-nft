@@ -26,8 +26,8 @@ const sponsors = [
 
 const Batches = () => {
   return (
-    <div className="flex bg-[#232323] justify-center items-center w-full px-4 md:px-10">
-      <div className="grid grid-cols-2 lg:grid-cols-4 items-center pt-2 lg:pt-10 gap-5 w-full">
+    <div className="relative bg-[#232323] justify-center items-center w-full px-4 md:px-10">
+      <div className="grid grid-cols-2 lg:grid-cols-4 items-center  gap-5 w-full">
         {sponsors.map((item, index) => (
           <div key={index} className="">
             <Image
