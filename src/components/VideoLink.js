@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import { getCldVideoUrl } from "next-cloudinary";
-import Logo from "../public/your-logo.svg"; // Replace with your logo path
+import Logo from "../public/anmc-logo.png"; // Replace with your logo path
 
 const VideoLink = () => {
   const [videoUrl, setVideoUrl] = useState("");
