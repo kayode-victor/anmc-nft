@@ -11,7 +11,7 @@ const VideoLink = () => {
           height="100%"
           aspectRatio="16:9" // Maintain the aspect ratio (optional)
           muted={true}
-          autoPlay="on-scroll"
+          autoPlay={true}
           src="https://res.cloudinary.com/dikzx4eyh/video/upload/v1716218938/pepperlyl/anmc-2_enuiqz.mp4"
           logo={{
             imageUrl: getCldImageUrl({
